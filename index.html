@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EduPlay – Free Educational Browser Games | Play. Discover. Learn.</title>
+<meta name="description" content="EduPlay is a free collection of fun, interactive educational games you can play in your browser. Explore geography, space, science, history and more.">
+<meta name="theme-color" content="#0a0f24">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EduPlay">
+<meta property="og:title" content="EduPlay – Play. Discover. Learn.">
+<meta property="og:description" content="Explore the world through fun, interactive educational games.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EduPlay – Play. Discover. Learn.">
+<meta name="twitter:description" content="Explore the world through fun, interactive educational games.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"EduPlay","description":"Free educational browser games."}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="container bar">
+    <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="34" height="34">EduPlay</a>
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#featured">Featured</a><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div>
+        <h1 id="hero-title">Play. Discover. <span>Learn.</span></h1>
+        <p class="sub">Explore the world through fun, interactive educational games.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#games">Browse games</a>
+          <a class="btn btn-ghost btn-lg" href="#about">Our mission</a>
+        </div>
+      </div>
+      <div class="stack" aria-hidden="true" id="hero-stack"></div>
+    </div>
+  </section>
+
+  <section id="featured" aria-labelledby="feat-title">
+    <div class="container">
+      <div class="sec-head"><div><h2 id="feat-title">Featured games</h2><p>Start here.</p></div></div>
+      <div class="grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <section id="games" class="alt" aria-labelledby="games-title">
+    <div class="container">
+      <div class="sec-head">
+        <div><h2 id="games-title">All games</h2><p>Search by name or pick a category.</p></div>
+        <form class="search" id="search-form" role="search">
+          <label class="sr" for="search">Search games by name</label>
+          <input id="search" type="search" placeholder="Search games by name…" autocomplete="off">
+        </form>
+      </div>
+      <div class="chips" id="cats" role="group" aria-label="Filter by category"></div>
+      <p class="sr" id="result-status" role="status" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="container about">
+      <div>
+        <h2 id="about-title">Learning that feels like play</h2>
+        <p>EduPlay is an independent project that publishes free educational games for the browser. There are no accounts, no downloads and no payments — open a game and start.</p>
+        <p>Each game is built to make one subject clearer and more memorable, whether that's the flags of the world or the planets of our solar system.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><h3>Free to play</h3><p>Every game runs in your browser at no cost.</p></div>
+        <div class="pillar"><h3>Curiosity first</h3><p>Games reward exploring and discovering, not memorising lists.</p></div>
+        <div class="pillar"><h3>Works anywhere</h3><p>Designed for computers, tablets and phones.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><img src="favicon.svg" alt="" width="34" height="34">EduPlay</a><p class="copy">Play. Discover. Learn.</p></div>
+      <div><h2>Explore</h2><ul><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li><a href="#games">Games</a></li></ul></div>
+      <div id="contact"><h2>Contact</h2><p id="contact-line"></p><div id="social"></div></div>
+    </div>
+    <p class="copy">© <span id="year">2026</span> EduPlay. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/games.js"></script>
+<script src="js/home.js"></script>
+<script>document.getElementById("hero-stack").innerHTML=GAMES.slice(0,3).map(g=>`<img src="${thumb(g)}" alt="" width="640" height="360">`).join("")</script>
+</body>
+</html>
